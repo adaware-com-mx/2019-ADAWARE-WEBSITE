@@ -1,3 +1,9 @@
+const dotenv = require('dotenv')
+
+if (process.env.NODE_ENV !== 'production') { 
+  dotenv.config() 
+}
+
 module.exports = {
   siteMetadata: {
     title: `A react next landing page`,
@@ -24,7 +30,7 @@ module.exports = {
       options: {
         spaceId: `zi4f8ip7l7wf`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `sAwSrvzo_pAnsxhMdW7z7iAnLSvyAqHfvCy-zIWWUQA`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     `gatsby-transformer-sharp`,
