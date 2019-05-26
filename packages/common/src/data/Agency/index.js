@@ -10,37 +10,37 @@ import Menny from '../../assets/image/agency/client/menny.png';
 const data = {
   menuItems: [
     {
-      label: 'Feature',
+      label: 'Home',
       path: '#featureSection',
       offset: '80',
     },
     {
-      label: 'Work History',
+      label: 'Productos',
       path: '#workHistorySection',
       offset: '100',
     },
     {
-      label: 'Portfolio',
+      label: 'Servicios',
       path: '#blogSection',
       offset: '100',
     },
     {
-      label: 'Quality feature',
+      label: 'Nosotros',
       path: '#qualitySection',
       offset: '100',
     },
     {
-      label: 'Testimonial',
+      label: 'Testimoniales',
       path: '#testimonialSection',
       offset: '100',
     },
     {
-      label: 'Team Member',
+      label: 'Oficinas',
       path: '#teamSection',
       offset: '67',
     },
     {
-      label: 'FAQ',
+      label: 'Blog',
       path: '#faqSection',
       offset: '100',
     },
