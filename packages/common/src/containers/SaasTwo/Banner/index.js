@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Icon from 'react-icons-kit';
 import Fade from 'react-reveal/Fade';
+import { openModal, closeModal } from '@redq/reuse-modal';
 import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
@@ -10,9 +11,37 @@ import Button from 'reusecore/src/elements/Button';
 import Image from 'reusecore/src/elements/Image';
 import Container from '../../../components/UI/Container';
 import TiltShape from '../TiltShape';
-import { BannerWrapper, DiscountWrapper, DiscountLabel } from './banner.style';
+import { 
+  BannerWrapper, 
+  DiscountWrapper, 
+  DiscountLabel,
+  VideoModal,
+  PlayButton,
+  VideoWrapper, 
+} from './banner.style';
 import BannerImage from '../../../assets/image/saasTwo/banner-image.png';
 import { ic_play_circle_filled } from 'react-icons-kit/md/ic_play_circle_filled';
+import { play } from 'react-icons-kit/entypo/play';
+
+// close button for modal
+const CloseModalButton = () => (
+  <Button
+    className="modalCloseBtn"
+    variant="fab"
+    onClick={() => closeModal()}
+    icon={<i className="flaticon-plus-symbol" />}
+  />
+);
+
+const ModalContent = () => (
+  <VideoWrapper>
+    <iframe
+      title="Video"
+      src="https://www.youtube.com/embed/8ME-QAlW6Ww"
+      frameBorder="0"
+    />
+  </VideoWrapper>
+);
 
 const BannerSection = ({
   row,
@@ -24,8 +53,27 @@ const BannerSection = ({
   imageWrapper,
   buttonWrapper,
   button,
-  fillButton,
 }) => {
+  // modal handler
+  const handleVideoModal = () => {
+    openModal({
+      config: {
+        className: 'video-modal',
+        disableDragging: true,
+        default: {
+          width: '100%',
+          height: '100%',
+          x: 0,
+          y: 0,
+        },
+      },
+      component: ModalContent,
+      componentProps: {},
+      closeComponent: CloseModalButton,
+      closeOnClickOutside: true,
+    });
+  };
+
   return (
     <BannerWrapper id="banner_section">
       <TiltShape />
@@ -34,42 +82,39 @@ const BannerSection = ({
           <Box {...contentWrapper}>
             <DiscountWrapper>
               <DiscountLabel>
-                <Text {...discountAmount} content="25% Save" />
+                <Text {...discountAmount} content="Con ADAWARE," />
                 <Text
                   {...discountText}
-                  content="for first month trail version"
+                  content="mejores procesos en tu empresa"
                 />
               </DiscountLabel>
             </DiscountWrapper>
             <Heading
               {...title}
-              content="Ultimate Platform to monitor your best workflow."
+              content="Asesores de las mejores soluciones contables y administrativas."
             />
             <Text
               {...description}
-              content="For Enhanced performance we use LiteSpeed Web Server, HTTP/2, PHP7. We make your website faster, which will help you to increase search ranking!"
+              content="Comprueba por qué con un mejor software empresarial te sentirás con superpoderes y disfrutaras de la seguridad y tranquilidad que soñaste."
             />
             <Box {...buttonWrapper}>
-              <Link href="#">
-                <a>
-                  <Button {...fillButton} title="FREE TRIAL" />
-                </a>
-              </Link>
-              <Link href="#">
-                <a>
-                  <Button
-                    {...button}
-                    title="WATCH VIDEO"
-                    icon={<Icon icon={ic_play_circle_filled} size={30} />}
-                    iconPosition="left"
-                  />
-                </a>
-              </Link>
+              <Button 
+                {...button}
+                title="VER PRESENTACIÓN EN VIDEO"
+                icon={<Icon icon={ic_play_circle_filled} size={30} />}
+                iconPosition="left"
+                onClick={handleVideoModal}
+              />
             </Box>
           </Box>
           <Box {...imageWrapper}>
             <Fade bottom>
-              <Image src={BannerImage} alt="banner image" />
+               <VideoModal> 
+                <Image src={BannerImage} alt="ADAWARE, Asesores" />
+                <PlayButton tabIndex="1000" onClick={handleVideoModal}>
+                  <Icon icon={play} size={40} />
+                </PlayButton>
+              </VideoModal>
             </Fade>
           </Box>
         </Box>

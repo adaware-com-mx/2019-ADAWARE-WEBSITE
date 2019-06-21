@@ -23,27 +23,27 @@ import { briefcase } from 'react-icons-kit/fa/briefcase';
 
 export const MENU_ITEMS = [
   {
-    label: 'Home',
+    label: 'Inicio',
     path: '#banner_section',
     offset: '0',
   },
   {
-    label: 'Feature',
+    label: 'Distribuidor CONTPAQi',
     path: '#feature_section',
     offset: '0',
   },
   {
-    label: 'Pricing',
+    label: 'Nosotros',
     path: '#pricing_section',
     offset: '0',
   },
   {
-    label: 'Testimonial',
+    label: 'Productos',
     path: '#testimonial_section',
     offset: '0',
   },
   {
-    label: 'FAQ',
+    label: 'Servicios',
     path: '#faq_section',
     offset: '0',
   },

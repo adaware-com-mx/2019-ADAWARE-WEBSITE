@@ -8,9 +8,9 @@ const colors = {
   inactiveField: '#f2f2f2', // 5
   inactiveButton: '#b7dbdd', // 6
   inactiveIcon: '#EBEBEB', // 7
-  primary: '#2aa275', // 8
-  primaryHover: '#2aa275', // 9
-  secondary: '#edcd37', // 10
+  primary: '#6b8f6b', // 8 Verde
+  primaryHover: '#6b8f6b', // 9
+  secondary: '#edcd37', // 10 Amarillo
   secondaryHover: '#edcd37', // 11
   yellow: '#fdb32a', // 12
   yellowHover: '#F29E02', // 13
