@@ -23,8 +23,8 @@ export const BannerWrapper = styled.section`
   background-image: url(${BannerBG}),
     linear-gradient(
       35deg, 
-      rgb(215, 245, 215) 0%, 
-      rgb(64, 114, 64) 100%);
+      rgb(3, 56, 117) 0%, 
+      rgb(10, 46, 117) 100%);
   background-size: cover;
   background-position: top center;
   @media (max-width: 575px) {
