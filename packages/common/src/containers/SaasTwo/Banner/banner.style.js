@@ -1,9 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 import BannerBG from '../../../assets/image/saasTwo/banner-texture.jpg';
-//En la linea 21 despues de export const BannerWrapper = ...
-//padding: 150px 0 50px 0;
-//background-image: url(${BannerBG}),
-//linear-gradient(35deg, rgb(147, 249, 185) 0%, rgb(29, 151, 108) 100%); 
 
 const Bubble = keyframes`
   0% {
@@ -48,7 +44,7 @@ export const DiscountLabel = styled.div`
   border-radius: 4em;
   padding: 9px 22px;
   margin-bottom: 22px;
-  background-color: rgba(230, 255, 230, 0.2);
+  background-color: rgba(62, 110, 209, 0.2);
   @media (max-width: 575px) {
     padding: 7px 10px;
   }

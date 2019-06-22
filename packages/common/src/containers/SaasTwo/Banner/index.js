@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
+// import Link from 'next/link';
 import Icon from 'react-icons-kit';
 import Fade from 'react-reveal/Fade';
 import { openModal, closeModal } from '@redq/reuse-modal';
@@ -11,13 +11,13 @@ import Button from 'reusecore/src/elements/Button';
 import Image from 'reusecore/src/elements/Image';
 import Container from '../../../components/UI/Container';
 import TiltShape from '../TiltShape';
-import { 
-  BannerWrapper, 
-  DiscountWrapper, 
+import {
+  BannerWrapper,
+  DiscountWrapper,
   DiscountLabel,
   VideoModal,
   PlayButton,
-  VideoWrapper, 
+  VideoWrapper,
 } from './banner.style';
 import BannerImage from '../../../assets/image/saasTwo/banner-image.png';
 import { ic_play_circle_filled } from 'react-icons-kit/md/ic_play_circle_filled';
@@ -85,7 +85,7 @@ const BannerSection = ({
                 <Text {...discountAmount} content="Con ADAWARE," />
                 <Text
                   {...discountText}
-                  content="mejores procesos en tu empresa"
+                  content="mejores procesos"
                 />
               </DiscountLabel>
             </DiscountWrapper>
@@ -95,7 +95,7 @@ const BannerSection = ({
             />
             <Text
               {...description}
-              content="Comprueba por qué con un mejor software empresarial te sentirás con superpoderes y disfrutaras de la seguridad y tranquilidad que soñaste."
+              content="Comprueba por qué con un mejor software empresarial disfrutaras de la seguridad y tranquilidad que soñaste."
             />
             <Box {...buttonWrapper}>
               <Button 
@@ -166,7 +166,7 @@ BannerSection.defaultProps = {
   discountAmount: {
     fontSize: ['13px', '14px', '14px', '14px', '14px'],
     fontWeight: '700',
-    color: '#00865b',
+    color: '#9fc3ed',
     mb: 0,
     as: 'span',
     mr: '0.4em',

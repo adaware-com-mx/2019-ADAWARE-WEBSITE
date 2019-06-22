@@ -168,7 +168,8 @@ export const ContentWrapper = styled.div`
           }
           &.is-current {
             a {
-              color: #336699;
+              /* Pense que era para cambiar el menu pero no */
+              color: #fd792a; 
             }
           }
         }
@@ -205,7 +206,7 @@ export const ContentWrapper = styled.div`
         }
         &.is-current {
           a {
-            color: #edcd37;
+            color: #fd792a;
           }
         }
         a {
@@ -215,7 +216,7 @@ export const ContentWrapper = styled.div`
           color: #fff;
           transition: 0.15s ease-in-out;
           &:hover {
-            color: #edcd37;
+            color: #fd792a;
           }
         }
       }
