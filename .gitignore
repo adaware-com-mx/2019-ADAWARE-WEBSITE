@@ -1,6 +1,8 @@
 
-packages/*/yarn.lock
-packages/*/package-lock.json
+# packages/*/yarn.lock
+# packages/*/package-lock.json
+*/yarn.lock
+*/package-lock.json
 
 # Logs
 logs
@@ -37,10 +39,10 @@ dist
 bin/published.js
 
 # Build Path of Test Fixtures
-test/**/public
+# test/**/public
 .gatsby-context.js
 .DS_Store
-public/
+# public/
 node_modules/
 .cache/
 .netlify
